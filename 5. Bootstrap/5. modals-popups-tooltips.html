@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+    
+  <head>
+      
+    <meta charset="utf-8">
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <style type="text/css">
+    
+        body {
+            position: relative;
+        }
+
+    </style>
+
+  </head>
+    
+  <body>
+
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-name="Elijah">
+    Email Elijah
+</button>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-name="Caleb">
+    Email Caleb
+</button>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-name="Poppy">
+    Email Poppy
+</button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" data-placement="bottom" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+
+  <button id="tb" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">
+    Tooltip on bottom
+  </button>
+
+ 
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js"></script>
+            
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    
+        $('#exampleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var recipient = button.data('name');
+            var modal = $(this);
+            modal.find('.modal-title').text('New message to ' + recipient);
+        });
+
+        $('#exampleModal').on('hide.bs.modal', function (event) {
+            alert("Modal closed")
+        });
+
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+            })
+
+        $('#tb').on('show.bs.tooltip', function (event) {
+            alert("tooltip opened")
+        });
+
+        $('body').scrollspy({ target: '#navbar-example' })
+
+
+    </script>
+</body>
+    
+</html>
