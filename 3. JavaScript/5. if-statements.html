@@ -1,0 +1,46 @@
+<html>
+    
+    <head>
+        
+        <title>JavaScript</title>
+
+        <style type=text/css>
+
+            
+        </style>
+        
+    </head>
+
+    <body>
+
+        <input id="textEntered" type="text" placeholder="enter the magic word">
+
+        <button id="logIn">log in</button>        
+        
+        
+        <script type="text/javascript">
+
+            document.getElementById("logIn").onclick = function() {
+             
+             var magicWord = "";
+
+             magicWord = document.getElementById("textEntered").value;
+             
+             if (magicWord == "bruh") {
+
+                alert("Please enter!");
+
+             } else {
+
+                alert("Sorry please try again!");
+
+             }
+         };
+
+            
+            
+        </script>
+
+    </body>
+
+</html>

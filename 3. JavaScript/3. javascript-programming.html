@@ -1,0 +1,44 @@
+<html>
+    
+    <head>
+        
+        <title>JavaScript</title>
+
+        <style type=text/css>
+
+            
+        </style>
+        
+    </head>
+
+    <body>
+        
+        <input id="textEntered" type="text">
+
+        <button id="textChanger">Change the text</button>
+
+        <p id=pageText>This is some text</p>
+        
+        <script type="text/javascript">
+
+            var x = 5;
+
+            x = 20;
+
+            var name = "Elijah";
+
+            document.getElementById("textChanger").onclick = function() {
+             
+                var copy = "";
+
+                copy = document.getElementById("textEntered").value;
+                
+                document.getElementById("pageText").innerHTML = copy;
+            };
+
+            
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,54 @@
+<html>
+    
+    <head>
+        
+        <title>JavaScript</title>
+
+        <style type=text/css>
+
+            
+        </style>
+        
+    </head>
+
+    <body>    
+        
+        <div id="forTweetDiv"></div>
+
+        <div id="whileTweetDiv"></div>
+        
+        <script type="text/javascript">
+
+        var forTweetString = "";
+
+        var tweets = ["Howdy!", "I lurve cornflakes", "Night night :)", "Sweet dreams!"]
+
+        for (var i = 0; i<tweets.length; i++) {
+
+            forTweetString = forTweetString + "<p>" + tweets[i] + "</p>";
+            
+        }    
+
+        document.getElementById("forTweetDiv").innerHTML = forTweetString;
+
+        var whileTweetString = "";
+
+        var tweets = ["Howdy!", "I lurve cornflakes", "Night night :)", "Sweet dreams!"]
+
+        var j = 0;
+
+        while (j < tweets.length) {
+
+            whileTweetString = whileTweetString + "<p>" + tweets[j] + "</p>";
+
+            j++;
+            
+        }    
+
+        document.getElementById("whileTweetDiv").innerHTML = whileTweetString;
+            
+        </script>
+
+    </body>
+
+</html>

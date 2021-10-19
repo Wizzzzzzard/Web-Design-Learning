@@ -1,0 +1,58 @@
+<html>
+    
+    <head>
+        
+        <title>JavaScript</title>
+        
+    </head>
+
+    <body>
+
+        <p id="text">Hello World!</p>
+
+        <button id="myButton">Change text</button>
+
+        <p id="second-paragraph">JavaScript is ...</p>
+
+        <button id="secondButton">Append text</button>
+
+        <p id="third-paragraph"></p>
+
+        <button id="thirdButton">Make text</button>
+
+        <p id="moreText">This is some text</p>
+
+        <button id="styleText">Style Text</button>
+
+        <script type="text/javascript">
+
+            document.getElementById("myButton").onclick = function() {
+
+                document.getElementById("text").innerHTML = "Bonjour tout le monde!";
+
+            };
+            //document tells javascript we are working with the HTML document we're working in
+            /*getElementById allows us to select an element within the document based on its id
+            //innerHTML tells javascript we want the html within that element, and we are changing it using =
+            */
+
+            document.getElementById("secondButton").onclick = function() {
+                
+                document.getElementById("second-paragraph").innerHTML = "I think " + document.getElementById("second-paragraph").innerHTML + "cool!";
+            };
+
+            document.getElementById("thirdButton").onclick = function() {
+                
+                document.getElementById("third-paragraph").innerHTML = "Magic text!";
+            };
+
+            document.getElementById("styleText").onclick = function() {
+                document.getElementById("moreText").style.color = "red";
+                document.getElementById("moreText").style.fontSize = "50px";
+           };
+
+        </script>
+
+    </body>
+
+</html>
