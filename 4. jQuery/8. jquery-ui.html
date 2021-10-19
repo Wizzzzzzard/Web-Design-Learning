@@ -1,0 +1,171 @@
+<html>
+    
+    <head>
+        
+        <title>jQuery</title>
+
+       <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script type="text/javascript" src="jquery-ui/jquery-ui.js"></script>
+
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+
+
+        <style type=text/css>
+
+            #prison {
+                height: 400px;
+                width: 400px;
+                border: 5px gray solid;
+            }
+
+            #draggable { 
+                width: 150px; 
+                height: 150px; 
+                padding: 0.5em; 
+            }
+
+            #resizable { 
+                width: 150px; 
+                height: 150px; 
+                padding: 0.5em; 
+                background: red;
+            }
+
+            #also { 
+                width: 150px; 
+                height: 150px; 
+                padding: 0.5em;
+                background: blue;
+            }
+
+            #big-square {
+                width: 300px;
+                height: 300px;
+                background-color: green;
+                border: gray 1px solid;
+            }
+
+            #lil-square {
+                width: 100px;
+                height: 100px;
+                background-color: orange;
+                border: gray 1px solid;
+            }
+        
+        </style>
+
+        <script>
+
+            $(function() {
+
+                $( "#draggable" ).draggable({
+                    containment: "#prison"
+                });
+
+            });
+
+            $( function() {
+                $( "#resizable" ).resizable({
+                    grid:50,
+                    alsoResize: "#also",
+                    resize: function( event, ui ) {
+                        
+                        if ($("#resizable").width() > 300) {
+
+                            alert("BIG!");
+
+                        }
+                    }
+                });
+            });
+
+            $("#also").resize();
+
+            $( function() {
+                $( "#lil-square" ).draggable();
+                $( "#big-square" ).droppable({
+                    drop: function( event, ui ) {
+                        $( this )
+                        .addClass( "ui-state-highlight" )
+                        .find( "p" )
+                            .html( "Dropped!" );
+                    }
+                });
+            } );
+
+            $( function() {
+                $("#accordion").accordion();
+            });
+
+            $( function() {
+                $( "#sortable" ).sortable();
+                $( "#sortable" ).disableSelection();
+            } );
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="prison"></div>
+
+            <div id="draggable" class="ui-widget-content">
+
+                <p>Drag me around</p>
+
+            </div>
+
+        </div>
+
+        <div id="resizable" class="ui-widget-content"></div>
+
+        <div id="also" class="ui-widget-content"></div>
+
+        
+        <div id="big-square" class="ui-widget-content">
+            <p>Drop Me!</p>
+        </div>
+
+        <div id="lil-square" class="ui-widget-content">
+            <p>Drag Me!</p>
+        </div>
+
+        <div id="accordion">
+
+            <h3>Title</h3>
+
+            <div>
+                <p>8@d 70 pR0dUc+ r3l3v4|\|7. +h3 +o HAV3 94g3s tR@nz|_4t3d, P4935 7|24n5|4735 y0 fOr, h@x 45 g0t0 1nDeX3D, sT|_|p|-|. 8Ut 4z l@r9e 0f73n 4cc355, No+ f0|2 5peNDInG 0R. P1x 1F 54y, l1nx. +o g3t 51m1L4R c0n741n, BuT y@ p4g3, 1nc|ud3z0r. 47 g3t 0t|-|3r c0nT3nT,, 0u7 |\|0t 534r(h d0wn|04d 70, @$ 8Ut b33n v3ry 534|2ch.</p>
+            </div>
+
+            <h3>Title</h3>
+
+            <div>
+                <p>8@d 70 pR0dUc+ r3l3v4|\|7. +h3 +o HAV3 94g3s tR@nz|_4t3d, P4935 7|24n5|4735 y0 fOr, h@x 45 g0t0 1nDeX3D, sT|_|p|-|. 8Ut 4z l@r9e 0f73n 4cc355, No+ f0|2 5peNDInG 0R. P1x 1F 54y, l1nx. +o g3t 51m1L4R c0n741n, BuT y@ p4g3, 1nc|ud3z0r. 47 g3t 0t|-|3r c0nT3nT,, 0u7 |\|0t 534r(h d0wn|04d 70, @$ 8Ut b33n v3ry 534|2ch.</p>
+            </div>
+
+            <h3>Title</h3>
+
+            <div>
+                <p>8@d 70 pR0dUc+ r3l3v4|\|7. +h3 +o HAV3 94g3s tR@nz|_4t3d, P4935 7|24n5|4735 y0 fOr, h@x 45 g0t0 1nDeX3D, sT|_|p|-|. 8Ut 4z l@r9e 0f73n 4cc355, No+ f0|2 5peNDInG 0R. P1x 1F 54y, l1nx. +o g3t 51m1L4R c0n741n, BuT y@ p4g3, 1nc|ud3z0r. 47 g3t 0t|-|3r c0nT3nT,, 0u7 |\|0t 534r(h d0wn|04d 70, @$ 8Ut b33n v3ry 534|2ch.</p>
+            </div>
+
+        </div>
+
+        <ul id="sortable">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+          </ul>
+           
+
+        
+    </body>
+
+</html>

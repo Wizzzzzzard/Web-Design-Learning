@@ -1,0 +1,67 @@
+<html>
+    
+    <head>
+        
+        <title>jQuery</title>
+
+       <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <style type=text/css>
+
+        .circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 40px;
+            float: left;
+        }
+
+        #circle-green {
+            background-color: green;
+        }
+
+        #circle-red {
+            background-color: red;
+        }
+
+        #sneaky {
+            display: none;
+        }
+        
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id=circle-green class=circle></div>
+
+        <div id=circle-red class=circle></div>
+
+        <p>Here is some fine, fine text!</p>
+
+        <button id="toggle">Toggle Text!</button>
+
+        
+        <script type="text/javascript">
+  
+            $("#toggle").click(function() {
+
+                if ($("p").css("display") == "none") {
+
+                    $("p").fadeIn("slow");
+
+                } else {
+
+                    $("p").fadeOut("slow");
+                }
+            });
+                
+
+        </script>
+        
+    </body>
+
+</html>

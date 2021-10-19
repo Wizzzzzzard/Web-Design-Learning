@@ -1,0 +1,86 @@
+<html>
+    
+    <head>
+        
+        <title>jQuery</title>
+
+       <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <style type=text/css>
+
+        .circle {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            margin: 40px;
+            float: left;
+        }
+
+        #circle-green {
+            background-color: green;
+        }
+
+        .square {
+            height: 100px;
+            width: 100px;
+            margin: 40px;
+            float: left;
+        }
+
+        #square-red1 {
+            background-color: red;
+        }
+
+        #square-red2 {
+            background-color: red;
+        }
+        
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id=circle-green class=circle>
+
+        </div>
+
+        <div id=square-red1 class=square>
+            
+        </div>
+
+        <div id=square-red2 class=square>
+            
+        </div>
+
+        <p>This is some text.</p>
+
+        <iframe src="http:www.codestars.com"></iframe>
+
+        <script type="text/javascript">
+
+            $("#circle-green").click(function() {
+
+                $("p").html("This text has changed");
+
+            });
+
+            $(".square").hover(function() {
+
+                $("iframe").attr("src", "http://scottishborders.tracsis-tads.com/conduit/borders?location_id=borders_speed_88#");
+
+            });
+
+            $("div").click(function() {
+
+                alert($("p").html());
+
+                });
+
+        </script>
+        
+    </body>
+
+</html>

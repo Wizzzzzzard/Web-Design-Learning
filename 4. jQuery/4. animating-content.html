@@ -1,0 +1,56 @@
+<html>
+    
+    <head>
+        
+        <title>jQuery</title>
+
+       <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <style type=text/css>
+
+        .circle {
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
+            margin: 40px;
+            float: left;
+        }
+
+        #circle-green {
+            background-color: green;
+        }
+        
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id=circle-green class=circle></div>
+
+        <script type="text/javascript">
+
+            $(".circle").click(function() {
+
+                $(this).animate({
+                    height:"400px",
+                    width:"400px",
+                    marginLet:"100px",
+                    marginTop:"100px"}, 
+                    2000, function() {
+
+                        $(this).css("background-color", "red");
+
+                        
+                    });
+
+
+            });
+            
+        </script>
+        
+    </body>
+
+</html>
